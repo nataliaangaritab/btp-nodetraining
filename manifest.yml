@@ -1,0 +1,24 @@
+applications:
+- name: firstapp
+  path: firstapp
+  memory: 64MB
+  buildpack: nodejs_buildpack
+  random-route: true
+  services:
+  - nodeuaa
+- name: web
+  path: web
+  memory: 64MB
+  buildpack: nodejs_buildpack
+  env:
+    destinations: >
+      [
+        {
+          "name": "firstapp",
+          "url": "https://firstapp-quiet-pangolin-sl.cfapps.us10.hana.ondemand.com/",
+          "forwardAuthToken": true
+        }
+      ]
+  random-route: true
+  services:
+  - nodeuaa

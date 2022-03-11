@@ -1,0 +1,17 @@
+{
+  "name": "firstapp",
+  "version": "1.0.0",
+  "description": "First app in NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "NA",
+  "license": "ISC",
+  "dependencies": {
+    "@sap/xsenv": "^3.2.1",
+    "@sap/xssec": "^3.2.13",
+    "express": "^4.17.3",
+    "passport": "^0.5.2"
+  }
+}

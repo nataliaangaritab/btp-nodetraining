@@ -1,0 +1,9 @@
+{
+    "routes": [
+        {
+            "source": "^/firstapp/(.*)$",
+            "target": "$1",
+            "destination": "firstapp"
+        }
+    ]
+}
